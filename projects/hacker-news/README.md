@@ -41,3 +41,5 @@ It replaces traditional ORMs and makes database access easy, migrates your datab
 - Migrate your database using the prisma migrate CLI commands `npx prisma migrate save --experimental` and `npx prisma migrate up --experimental`.
 - (Re-)generate Prisma Client
 - Use Prisma Client in your application code to access your database.
+
+## Wiring up GraphQL schema with Prisma Client

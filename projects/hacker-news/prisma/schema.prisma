@@ -1,7 +1,7 @@
 // Tells Prisma you’ll be using SQLite for your database connection
 
 datasource db {
-  provider = "sqlite" 
+  provider = "sqlite"
   url      = "file:./dev.db"
 }
 
@@ -11,7 +11,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// create a Link table to store data about links, 
+// create a Link table to store data about links,
 // and here’s what that data will look like
 
 model Link {
