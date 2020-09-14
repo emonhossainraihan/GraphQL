@@ -10,8 +10,10 @@
     "start": "node src/index.js"
   },
   "license": "MIT",
+  "devDependencies": {
+    "@prisma/cli": "^2.6.2"
+  },
   "dependencies": {
-    "graphql-yoga": "^1.18.3",
-    "nodemon": "^2.0.4"
+    "@prisma/client": "^2.6.2"
   }
 }

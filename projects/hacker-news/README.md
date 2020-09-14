@@ -18,3 +18,26 @@ In general, when adding a new feature to the API, the process will look pretty s
 2. Implement corresponding resolver functions for the added fields
 
 > Each level of nesting (i.e. nested curly braces) corresponds to one resolver execution level.
+
+## Integrating prisma
+
+Prisma has a schema, too! You can think of the prisma.schema file as a database schema. It has three components:
+
+- Data source: Specifies your database connection.
+- Generator: Indicates that you want to genenerate Prisma Client.
+- Data model: Defines your application models. Each model will be mapped to a table in the underlying database.
+
+> By the way windows show issue with yarn: `npm install @prisma/cli --save-dev`
+
+# Prisma
+
+ORMs are libraries that map tables in your database to classes in your programming language. [Prisma](https://www.prisma.io/docs/understand-prisma/prisma-in-your-stack/is-prisma-an-orm), on the other hand, is a database toolkit. The toolkit includes Prisma Client, which is an auto-generated query builder that exposes queries which are tailored to your models.
+
+It replaces traditional ORMs and makes database access easy, migrates your database schema.
+
+## workflow for updating your data
+
+- Manually adjust your Prisma data model.
+- Migrate your database using the prisma migrate CLI commands `npx prisma migrate save --experimental` and `npx prisma migrate up --experimental`.
+- (Re-)generate Prisma Client
+- Use Prisma Client in your application code to access your database.
