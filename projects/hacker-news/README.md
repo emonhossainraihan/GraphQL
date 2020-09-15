@@ -31,6 +31,8 @@ Prisma has a schema, too! You can think of the prisma.schema file as a database 
 
 # Prisma
 
+> Prisma Client(provides the database layer which offers CRUD operations) is used to access the database in your GraphQL resolvers (similar to an ORM)
+
 ORMs are libraries that map tables in your database to classes in your programming language. [Prisma](https://www.prisma.io/docs/understand-prisma/prisma-in-your-stack/is-prisma-an-orm), on the other hand, is a database toolkit. The toolkit includes Prisma Client, which is an auto-generated query builder that exposes queries which are tailored to your models.
 
 It replaces traditional ORMs and makes database access easy, migrates your database schema.
