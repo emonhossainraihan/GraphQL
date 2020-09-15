@@ -35,6 +35,10 @@ ORMs are libraries that map tables in your database to classes in your programmi
 
 It replaces traditional ORMs and makes database access easy, migrates your database schema.
 
+## Exploring your data in Prisma Studio
+
+- `npx prisma studio --experimental`
+  
 ## workflow for updating your data
 
 - Manually adjust your Prisma data model.
@@ -43,3 +47,12 @@ It replaces traditional ORMs and makes database access easy, migrates your datab
 - Use Prisma Client in your application code to access your database.
 
 ## Wiring up GraphQL schema with Prisma Client
+
+- The GraphQL `context` resolver argument
+
+After every change you make to the data model, you need to migrate your database and then re-generate Prisma Client
+
+- npx prisma migrate save --name "add-user-model" --experimental
+- npx prisma migrate up --experimental
+- npx prisma generate
+
